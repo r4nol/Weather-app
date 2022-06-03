@@ -68,8 +68,10 @@ function createWindow() {
     icon: "assets/cloudy.png",
     webPreferences: {
       nodeIntegration: true,
-      contextIsolation: false
+      contextIsolation: false,
+      devTools: false
     }
+    
   });
 
   win.loadFile(path.join(__dirname, 'index.html'));
