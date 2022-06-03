@@ -80,12 +80,12 @@ function createWindow() {
 
   win.show();
 
-  // ивент на нажатие кнопку закрыть
+  // close app event
   ipcMain.on('close-app', () => {
     win.close();
   });
 
-  // ивент на нажатие кнопку свернуть
+  // hide app event
   ipcMain.on('minimise-app', () => {
     win.minimize();
   });
