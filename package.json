@@ -1,0 +1,18 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "r4nol",
+  "license": "ISC",
+  "dependencies": {
+    "builder": "^5.0.0",
+    "electron": "^19.0.3",
+    "electron-builder": "^23.0.3",
+    "electron-fetch": "^1.7.4",
+    "fetch": "^1.1.0"
+  }
+}
