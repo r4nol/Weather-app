@@ -51,44 +51,48 @@
 /*####################################################################################################################################*/
 const path = require('path');
 const url = require('url');
-const {app, BrowserWindow, autoUpdater} = require('electron');
-const { ClientRequest } = require('http');
-const fetch = require('electron-fetch').default
+const { app, BrowserWindow, ipcMain } = require('electron');
 let win;
 
+
+
 function createWindow() {
-	win = new BrowserWindow({
-    height: 515,
-    width: 310,
-    frame: false, 
-    resizable: false, 
+  win = new BrowserWindow({
+    height: 600,
+    width: 550,
+    frame: false,
+    resizable: false,
     show: true,
     transparent: true,
     maximizable: false,
-		icon: "assets/cloudy.png",
+    icon: "assets/cloudy.png",
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false
     }
-	});
-  
+  });
 
-  // win.removeMenu();
+  win.loadFile(path.join(__dirname, 'index.html'));
 
-	win.loadURL(url.format({
-		pathname: path.join(__dirname, 'index.html'),
-		protocol: 'file:',
-		slashes: true
-	}));
+  win.on('closed', () => {
+    win = null;
+  });
 
-	win.on('closed', () => {
-		win = null;
-	});
+  win.show();
+
+  // ивент на нажатие кнопку закрыть
+  ipcMain.on('close-app', () => {
+    win.close();
+  });
+
+  // ивент на нажатие кнопку свернуть
+  ipcMain.on('minimise-app', () => {
+    win.minimize();
+  });
 }
 
 app.on('ready', createWindow);
 
 app.on('window-all-closed', () => {
-	app.quit();
+  app.quit();
 });
-

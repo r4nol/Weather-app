@@ -1,48 +1,41 @@
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-h1 {
-    margin: 0 auto;
-    font-size: 2.2em;
-    text-align: center;
-    color: linear-gradient(to bottom, #0000ff 0%, #ffff00 100%);
-    font-size: 5em;
-    border-radius: 30px;
-    border-radius: 20px;
+    user-select: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 2.7em;
 }
 
 body.sunny {
     background-image: linear-gradient(to bottom, #0000ff 0%, #ffff00 100%);
     border-radius: 20px;
 }
+
 body.cloudy {
     background-image: linear-gradient(to bottom, #0000ff 0%, #ffff00 100%);
     border-radius: 20px;
 }
+
 body.rainy {
     background-image: linear-gradient(to bottom, #0000ff 0%, #ffff00 100%);
     border-radius: 20px;
-} 
-
-.weather-png {
-    height: 72px;
-    position: absolute;
-    left: center;
-    top: 44px;
-    pointer-events: none;
 }
 
-#content {
-    margin-top: 155px;
-    margin-left: 39px;
-}
-
-.container{
-    -webkit-app-region: drag;
+.container {
+    /* -webkit-app-region: no-drag; */
+    background: linear-gradient(147.4deg, #A690FF 19.06%, #628EFF 70.1%);
     position: relative;
+    border-radius: 20px;
+    padding: 40px;
+    /* position: relative;
     user-select: none;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
@@ -55,21 +48,41 @@ body.rainy {
     background: linear-gradient(147.4deg, #A690FF 19.06%, #628EFF 70.1%);
     border-radius: 20px;
     width: 300px;
-    height: 500px;
+    height: 500px; */
 }
 
-#minimise {
+.drag-area {
+    width: 74%;
+    z-index: 1;
+    height: 61px;
     position: absolute;
-    left: 230px;
-    top: 3px;
-    height: 29px;
+    top: 0px;
+    left: 42px;
+    -webkit-app-region: drag;
+}
+
+#close,
+#minimise {
     cursor: pointer;
+    width: 20px;
+    height: 20px;
+    position: absolute;
 }
 
 #close {
-    cursor: pointer;
-    position: absolute;
-    left: 266px;
-    top: 3px;
-    height: 29px;
+    top: 20px;
+    right: 20px;
+}
+
+#minimise {
+    top: 25px;
+    right: 50px;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 49px;
 }

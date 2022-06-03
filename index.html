@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,18 +12,23 @@
 </head>
 
 <body>
-    <script src="render.js"></script>
+    <div class="drag-area"></div>
     <div class="container">
-            <img src="assets/Weather.png" class="weather-png">
-            <img src="assets/close.png" id="close" draggable="false">
-            <img src="assets/minus.png" id="minimise" draggable="false">
+        <img src="assets/Weather.png" draggable="false" class="weather-png">
+
+        <img src="assets/close.png" id="close" draggable="false">
+
+        <img src="assets/minus.png" id="minimise" draggable="false">
+
+
         <div id="content">
-            <div id="description"></div>
-            <h1 id="temp"></h1>
-            <div id="location"></div>
+            <div id="description">Test</div>
+            <h1 id="temp">21</h1>
+            <div id="location">Kiev</div>
         </div>
     </div>
-    
+
+    <script src="render.js"></script>
 </body>
 
 </html>
