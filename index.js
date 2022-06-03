@@ -51,14 +51,15 @@
 /*####################################################################################################################################*/
 const path = require('path');
 const url = require('url');
-const {app, BrowserWindow} = require('electron');
+const {app, BrowserWindow, autoUpdater} = require('electron');
+const { ClientRequest } = require('http');
 const fetch = require('electron-fetch').default
 let win;
 
 function createWindow() {
 	win = new BrowserWindow({
-		width: 700,
-		height: 500,
+    height: 515,
+    width: 310,
     frame: false, 
     resizable: false, 
     show: true,
@@ -75,7 +76,7 @@ function createWindow() {
   // win.removeMenu();
 
 	win.loadURL(url.format({
-		pathname: path.join('index.html'),
+		pathname: path.join(__dirname, 'index.html'),
 		protocol: 'file:',
 		slashes: true
 	}));

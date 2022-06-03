@@ -1,0 +1,75 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    margin: 0 auto;
+    font-size: 2.2em;
+    text-align: center;
+    color: linear-gradient(to bottom, #0000ff 0%, #ffff00 100%);
+    font-size: 5em;
+    border-radius: 30px;
+    border-radius: 20px;
+}
+
+body.sunny {
+    background-image: linear-gradient(to bottom, #0000ff 0%, #ffff00 100%);
+    border-radius: 20px;
+}
+body.cloudy {
+    background-image: linear-gradient(to bottom, #0000ff 0%, #ffff00 100%);
+    border-radius: 20px;
+}
+body.rainy {
+    background-image: linear-gradient(to bottom, #0000ff 0%, #ffff00 100%);
+    border-radius: 20px;
+} 
+
+.weather-png {
+    height: 72px;
+    position: absolute;
+    left: center;
+    top: 44px;
+    pointer-events: none;
+}
+
+#content {
+    margin-top: 155px;
+    margin-left: 39px;
+}
+
+.container{
+    -webkit-app-region: drag;
+    position: relative;
+    user-select: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.8em;
+    color: linear-gradient(147.4deg, #A690FF 19.06%, #628EFF 70.1%);
+    text-shadow: .0.7em .0.7em 0 rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(147.4deg, #A690FF 19.06%, #628EFF 70.1%);
+    border-radius: 20px;
+    width: 300px;
+    height: 500px;
+}
+
+#minimise {
+    position: absolute;
+    left: 230px;
+    top: 3px;
+    height: 29px;
+    cursor: pointer;
+}
+
+#close {
+    cursor: pointer;
+    position: absolute;
+    left: 266px;
+    top: 3px;
+    height: 29px;
+}

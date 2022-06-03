@@ -4,13 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-packager . --platform=win32 --arch=x64 --overwrite Weather --icon=assets/favicon.ico"
+
   },
   "author": "r4nol",
   "license": "ISC",
   "dependencies": {
     "builder": "^5.0.0",
     "electron": "^19.0.3",
+    "electron-build": "^0.0.3",
     "electron-builder": "^23.0.3",
     "electron-fetch": "^1.7.4",
     "fetch": "^1.1.0"

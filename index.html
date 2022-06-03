@@ -9,66 +9,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather app</title>
     <link rel="stylesheet" href="style.css">
-    <style type="text/css">
-        .Weather {
-            position: absolute;
-            left: center;
-            top: 10px;
-        }
-    </style>
-    <style>
-        #weather{
-            margin-top: 159px;
-        }
-        body {
-            user-select: none;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 400;
-            font-size: 2em;
-            color: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
-            text-shadow: .0.7em .0.7em 0 rgba(0,0,0,0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-image: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
-        }
-        h1 {
-            margin: 0 auto;
-            font-size: 2.2em;
-            text-align: center;
-            color: linear-gradient(to bottom, #0000ff 0%, #ffff00 100%);
-            font-size: 5em;
-        }
-        body.sunny {
-            background-image: linear-gradient(to bottom, #0000ff 0%, #ffff00 100%);
-        }
-        body.cloudy {
-            background-image: linear-gradient(to bottom, #0000ff 0%, #ffff00 100%);
-        }
-        body.rainy {
-            background-image: linear-gradient(to bottom, #0000ff 0%, #ffff00 100%);
-        } 
-    </style>
 </head>
 
 <body>
     <script src="render.js"></script>
-    <div id="weather">
-        <div id="description"></div>
-        <h1 id="temp"></h1>
-        <div id="location"></div>
-        
+    <div class="container">
+            <img src="assets/Weather.png" class="weather-png">
+            <img src="assets/close.png" id="close" draggable="false">
+            <img src="assets/minus.png" id="minimise" draggable="false">
+        <div id="content">
+            <div id="description"></div>
+            <h1 id="temp"></h1>
+            <div id="location"></div>
+        </div>
     </div>
-    <img src="assets/Weather.png" class="Weather" alt="">
-    <!-- <img src="assets/Monday.png" class="Monday" alt="">
-    <img src="assets/Tuesday.png" class="Tuesday" alt="">
-    <img src="assets/Wednesday.png" class="Wednesday" alt="">
-    <img src="assets/Thursday.png" class="Thursday" alt="">
-    <img src="assets/Friday.png" class="Friday" alt="">
-    <img src="assets/Saturday.png" class="Saturday" alt="">
-    <img src="assets/Sunday.png" class="Sunday" alt=" "> --> 
-    <!-- <img src="assets/Rectangle 1.png" class="background" alt=""> -->
-    <!-- <img src="assets/Uman.png" class="Uman" alt=""> -->
+    
 </body>
 
 </html>
